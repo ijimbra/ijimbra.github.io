@@ -22,15 +22,88 @@ a:active {
 .wrapper {
     width: 1024px;
     margin: 0 auto;
-    margin-top: 100px;
-}
-
-.container {
-    margin-left: 120px;
+    margin-top: 50px;
 }
 
 .small-container {
-    margin-top: 100px;
-    margin-left: 330px;
-    margin-right: 100px;
+    float: left;
+    margin-top: 50px;
 }
+
+.rectangle {
+    float: left;
+    width: 33.33%;
+    height: 500px;
+    width: 250px;
+    background-color: white;
+    border-color: black;
+    border-radius: 5px;
+    text-align: center; 
+    animation:bgChange 30s infinite;
+    animation-direction: alternate;
+    overflow: hidden;
+}
+
+@keyframes bgChange {
+  0% {background:black;}
+  50% {background:rgb(187, 223, 238);}
+  100% {background:black;}
+}
+
+.rectangle-bottoms-up {
+  float: left;
+  width: 33.33%;
+  height: 500px;
+  width: 250px;
+  background-color: black;
+  border-color: white;
+  border-radius: 5px;
+  text-align: center; 
+  animation:bgChangeRev 30s infinite;
+  animation-direction: alternate;
+  overflow: hidden;
+}
+
+@keyframes bgChangeRev {
+  0% {background: rgb(187, 223, 238);}
+  50% {background: black;}
+  100% {background: rgb(187, 223, 238);}
+}
+
+.circle {
+    position:relative;
+    height: 50px;
+    width: 50px;
+    background-color: yellow;
+    border-top-left-radius: 50% 50%;
+    border-top-right-radius: 50% 50%;
+    border-bottom-right-radius: 50% 50%;
+    border-bottom-left-radius: 50% 50%;
+}
+
+.rotate {
+    animation: 30s linear infinite rotate;
+    position: relative;
+    top: 60px;
+  }
+
+  .r-left {
+    transform-origin: 500% 1000%;
+  }
+
+  .r-center {
+    transform-origin: 500% 1000%;
+  }
+
+  .r-right {
+    transform-origin: 500% 1000%;
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(90deg)
+    }
+    to {
+      transform: rotate(-270deg)
+    }
+  }
