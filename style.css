@@ -26,7 +26,6 @@ a:active {
 }
 
 .small-container {
-    float: left;
     margin-top: 50px;
 }
 
@@ -85,25 +84,26 @@ a:active {
     animation: 30s linear infinite rotate;
     position: relative;
     top: 60px;
-  }
+}
 
-  .r-left {
+.r-left {
     transform-origin: 500% 1000%;
-  }
+}
 
-  .r-center {
+.r-center {
     transform-origin: 500% 1000%;
-  }
+}
 
-  .r-right {
+.r-right {
     transform-origin: 500% 1000%;
-  }
+}
 
-  @keyframes rotate {
+@keyframes rotate {
     from {
       transform: rotate(90deg)
     }
     to {
       transform: rotate(-270deg)
     }
-  }
+}
+
